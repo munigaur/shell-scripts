@@ -1,11 +1,11 @@
 #!/bin/bash
 
-val=0
+i=10
 
-while [ $val -ne 10 ] ; do
-echo I = $val
+while [ $i -lt 0 ] ; do
+echo "iteration number is $i"
 
-i=$(($val+1))
+i=$(($i+1))
 done
 
 
