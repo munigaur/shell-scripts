@@ -1,6 +1,6 @@
 #!/bin/bash
 
-i=10
+i=0
 
 while [ $i -lt 0 ] ; do
 echo "iteration number is $i"
