@@ -2,7 +2,7 @@
 
 a=$1
 
-if ["$a" == "xyz" ]; then
+if [ "$a" == "xyz" ]; then
 echo -e "\e[32m both of them are equal \e[0m"
 
 else
