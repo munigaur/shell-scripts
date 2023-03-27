@@ -10,7 +10,7 @@ if [ -z "$COMPONENT" ] || [ -z "$ENV" ]; then
     exit 1
 fi 
 
-AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=b52-ansible-dev-20Jan2023" --region us-east-1 | jq .Images[].ImageId | sed -e 's/"//g')
+AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=muni_with_ansible" --region us-east-1 | jq .Images[].ImageId | sed -e 's/"//g')
 SG_ID=$(aws ec2 describe-security-groups --filters Name=group-name,Values=b52_allow_all --region us-east-1 | jq .SecurityGroups[].GroupId | sed -e 's/"//g')
 
 echo -e "AMI ID Used to launch the instance is \e[32m $AMI_ID \e[0m "
